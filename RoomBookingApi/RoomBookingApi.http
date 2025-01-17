@@ -1,0 +1,44 @@
+@RoomBookingApi_HostAddress = http://localhost:5019
+
+GET {{RoomBookingApi_HostAddress}}/
+
+###
+
+GET {{RoomBookingApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{RoomBookingApi_HostAddress}}/room/
+Accept: application/json
+
+###
+
+GET {{RoomBookingApi_HostAddress}}/room/1
+Accept: application/json
+
+###
+
+POST {{RoomBookingApi_HostAddress}}/room/
+Content-Type: application/json
+
+{
+    "name": "New Salle",
+    "capacity": 25,
+    "area": 95.25,
+    "isAccessible" : true
+}
+
+###
+
+POST {{RoomBookingApi_HostAddress}}/room/
+Content-Type: application/json
+
+{
+    "name": "",
+    "capacity": -3,
+    "area": 150000.33,
+    "isAccessible" : 5
+}
+
+###
