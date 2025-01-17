@@ -1,0 +1,37 @@
+image: mcr.microsoft.com/dotnet/sdk:8.0
+
+stages:
+  - lint
+  - build
+  - test
+
+lint:
+  stage: lint
+  script:
+    - echo "Linting code..."
+    - cd src # Remplacez 'src' par le chemin vers votre projet si nécessaire
+    - dotnet format --check
+  only:
+    - main
+
+build:
+  stage: build
+  script:
+    - echo "Building project..."
+    - cd src # Naviguez vers le dossier contenant le fichier .csproj si nécessaire
+    - dotnet build --no-restore
+  only:
+    - main
+  needs:
+    - lint
+
+test:
+  stage: test
+  script:
+    - echo "Running tests..."
+    - cd src # Naviguez vers le dossier contenant le fichier .csproj si nécessaire
+    - dotnet test
+  only:
+    - main
+  needs:
+    - build
