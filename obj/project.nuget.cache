@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "45u809QhR5o=",
+  "success": true,
+  "projectFilePath": "/Users/alixan/Desktop/Cours/M1/full-stack/Room-booking-API/..csproj",
+  "expectedPackageFiles": [
+    "/Users/alixan/.nuget/packages/microsoft.aspnetcore.openapi/9.0.1/microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
+    "/Users/alixan/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

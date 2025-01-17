@@ -10,7 +10,7 @@ lint:
   script:
     - echo "Linting code..."
     - cd src # Remplacez 'src' par le chemin vers votre projet si nécessaire
-    - dotnet format --check
+    - dotnet format --verify-no-changes
   only:
     - main
 
